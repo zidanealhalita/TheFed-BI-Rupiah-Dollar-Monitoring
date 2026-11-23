@@ -1,0 +1,18 @@
+[project]
+name = "fed-bi-rupiah-monitor"
+version = "1.0.0"
+description = "Dashboard Streamlit: transmisi kebijakan The Fed ke BI-Rate dan rupiah"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning:streamlit.*"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]
+ignore = ["E501", "B905"]
